@@ -13,7 +13,12 @@ Here is a quick summary of the project directories:
 - **Ch10** is a generic implementation that allows the network to work with any number of hidden layers and any number of neurons within such layers. After the network is trained, all network parameters are saved. Such parameters can be loaded later for making predictions.
 - **Ch11** adds more generalization as the network can work with any number of samples and any number of outputs.
 
-At the moment, only **Ch04** to **Ch07** are made public to the project. The other directories will be made available soon.
+The timeline of updating the project:
+
+- 12 July: **Ch04** to **Ch07** are added. 
+- 14 July: **Ch08** is added.
+
+The other directories will be made available soon.
 
 # For More Information
 

@@ -17,6 +17,7 @@ The timeline of updating the project:
 
 - 12 July: **Ch04** to **Ch07** are added. 
 - 14 July: **Ch08** is added.
+- 16 July: **Ch09** is added.
 
 The other directories will be made available soon.
 

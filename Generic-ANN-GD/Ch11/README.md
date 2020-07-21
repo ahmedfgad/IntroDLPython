@@ -1,4 +1,4 @@
-# Part 8
+# Generic Neural Network
 
 Welcome to the project that builds a generic neural network trained using the gradient descent algorithm.
 

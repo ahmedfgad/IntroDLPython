@@ -11,13 +11,14 @@ Here is a quick summary of the project directories:
 - **Ch08** uses 2 hidden layers with any number of hidden neurons. 
 - **Ch09** adds an additional hidden layer to **Ch08** so that there are 3 hidden layers with any number of hidden neurons.
 - **Ch10** is a generic implementation that allows the network to work with any number of hidden layers and any number of neurons within such layers. After the network is trained, all network parameters are saved. Such parameters can be loaded later for making predictions.
-- **Ch11** adds more generalization as the network can work with any number of samples and any number of outputs.
+- **Ch11** adds more generalization as the network can work with any number of samples and any number of outputs. The bias is introduced. Moreover, batch and stochastic gradient descent are supported.
 
 The timeline of updating the project:
 
 - 12 July: **Ch04** to **Ch07** are added. 
 - 14 July: **Ch08** is added.
 - 16 July: **Ch09** and **Ch10** are added.
+- 21 July: **Ch11** is added.
 
 The other directories will be made available soon.
 

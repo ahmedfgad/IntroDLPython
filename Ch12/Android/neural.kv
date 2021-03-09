@@ -1,0 +1,188 @@
+ScreenManager:
+    MainScreen:
+    InputFileChooserScreen:
+    OutputFileChooserScreen:
+
+<MainScreen>:
+    name: "main"
+    MDBoxLayout:
+        padding: "5dp"
+        orientation: "vertical"
+    
+        MDGridLayout:
+            cols: 3
+            rows: 3
+            padding: "5dp"
+            size_hint_y: 0.4
+
+            MDTextField:
+                id: learning_rate
+                size_hint: [1.0, 1.0]
+                hint_text: "Learning Rate"
+                halign: "center"
+                text: "0.5"
+                helper_text: ">= 0 & <= 1.0"
+                helper_text_mode: "on_focus"
+    
+            MDTextField:
+                id: tolerance
+                size_hint: [1.0, 1.0]
+                hint_text: "Tolerance"
+                halign: "center"
+                text: "0.000001"
+    
+            MDTextField:
+                id: iterations
+                size_hint: [1.0, 1.0]
+                hint_text: "Iterations"
+                helper_text: "Integer"
+                helper_text_mode: "on_focus"
+                halign: "center"
+                text: "5000"
+    
+            MDTextField:
+                id: net_arch
+                size_hint: [1.0, 1.0]
+                hint_text: "Network Architecture"
+                helper_text: "Comma-separated integers"
+                helper_text_mode: "on_focus"
+                halign: "center"
+                text: "3, 2"
+    
+            MDBoxLayout:    
+                padding: "5dp"
+    
+                MDLabel:
+                    text: "Debug"
+            
+                MDCheckbox:
+                    id: debug
+                    active: False
+                    on_press: app.debug_switch(self)
+    
+            MDBoxLayout:
+                padding: "5dp"
+    
+                MDRaisedButton:
+                    id: activation_menu
+                    size_hint: [1.0, 1.0]
+                    text: "Activation Function"
+                    on_press: app.activation_menu.open()
+    
+            MDBoxLayout:
+                padding: "5dp"
+    
+                MDRaisedButton:
+                    id: gdtype_menu
+                    size_hint: [1.0, 1.0]
+                    text: "Gradient Descent Type"
+                    on_press: app.gdtype_menu.open()
+    
+            MDBoxLayout:
+                padding: "5dp"
+    
+                MDRaisedButton:
+                    id: input_data_file_button
+                    size_hint: [1.0, 1.0]
+                    text: "Input Data"
+                    on_press: app.root.current="input_chooser"
+    
+            MDBoxLayout:
+                padding: "5dp"
+    
+                MDRaisedButton:
+                    id: output_data_file_button
+                    size_hint: [1.0, 1.0]
+                    text: "Output Data"
+                    on_press: app.root.current="output_chooser"
+    
+        MDSpinner:
+            id: loading
+            active: False
+            size_hint: [0.05, 0.05]
+            pos_hint: {'center_x': .5, 'center_y': .5}
+    
+        MDBoxLayout:
+            padding: "5dp"
+            size_hint_y: 0.1
+    
+            MDRaisedButton:
+                id: btn
+                text: "Train Network"
+                font_size: "18dp"
+                size_hint: [1.0, 1.0]
+                on_press: app.button_press(self)
+    
+        MDLabel:
+            id: label
+            text: ""
+            size_hint: [1.0, 1.0]
+            halign: "center"
+            size_hint_y: 0.2
+
+<InputFileChooserScreen>:
+    name: "input_chooser"
+
+    BoxLayout:
+        orientation: "vertical"
+        padding: "5dp"
+
+        FileChooserListView:
+            id: file_chooser
+            size_hint_y: 0.8
+            rootpath: "/storage"
+
+        MDLabel:
+            size_hint_x: 1.0
+            size_hint_y: 0.1
+            id: select_file_label
+            halign: "center"
+            text: ""
+
+        BoxLayout:
+            size_hint_y: 0.1
+            padding: "5dp"
+
+            MDRaisedButton:
+                text: "Cancel"
+                on_press: app.root.current="main"
+                size_hint: [1.0, 1.0]
+            MDRaisedButton:
+                id: load_input_file
+                text: "Select"
+                on_press: app.select_file(1)
+                size_hint: [1.0, 1.0]
+
+<OutputFileChooserScreen>:
+    name: "output_chooser"
+
+    BoxLayout:
+        orientation: "vertical"
+        padding: "5dp"
+
+        FileChooserListView:
+            id: file_chooser
+            size_hint_y: 0.8
+            rootpath: "/storage"
+        
+        MDLabel:
+            size_hint_x: 1.0
+            size_hint_y: 0.1
+            id: select_file_label
+            halign: "center"
+            text: ""
+
+        BoxLayout:
+            size_hint_y: 0.1
+            padding: "5dp"
+
+            MDRaisedButton:
+                text: "Cancel"
+                on_press: app.root.current="main"
+                size_hint: [1.0, 1.0]
+            MDRaisedButton:
+                id: load_input_file
+                text: "Select"
+                on_press: app.select_file(2)
+                size_hint: [1.0, 1.0]
+

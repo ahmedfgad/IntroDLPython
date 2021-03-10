@@ -40,6 +40,17 @@ This repository is the GitHub project of this book: [Ahmed Fawzy Gad & Fatima Ez
 
 11. Deploying Neural Network to Mobile Devices
 
+Here is a quick summary of project implementation progress in the chapters:
+
+- **Ch03** builds and trains the simplest neural network with just a single input neuron and a single output neuron. The network does not have any hidden layers. There is just a single training sample.
+- **Ch04** extends **Ch03** implementation to allow the network to work with any number of inputs. 
+- **Ch05** introduces a single hidden layer with just 2 hidden neurons.
+- **Ch06** is just different from **Ch05** by using any number of hidden neurons within a single hidden layer. 
+- **Ch07** us0es 2 hidden layers with any number of hidden neurons. 
+- **Ch09** adds an additional hidden layer to **Ch07** so that there are 3 hidden layers with any number of hidden neurons.
+- **Ch9** is a generic implementation that allows the network to work with any number of hidden layers and any number of neurons within such layers. After the network is trained, all network parameters are saved. Such parameters can be loaded later for making predictions.
+- **Ch10** adds more generalization as the network can work with any number of samples and any number of outputs. The bias is introduced. Moreover, batch and stochastic gradient descent are supported.
+
 # Contact Us
 
 - E-mail: [ahmed.f.gad@gmail.com](mailto:ahmed.f.gad@gmail.com)
